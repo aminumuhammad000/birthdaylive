@@ -1,6 +1,22 @@
-.page {
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
   font-family: 'Nunito', sans-serif;
   color: #333;
+  line-height: 1.6;
+  background: #fff;
+  scroll-behavior: smooth;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Navbar */
@@ -12,6 +28,9 @@
   background: #4a3aff;
   color: white;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
@@ -27,6 +46,7 @@
 .navLink {
   color: white;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .navLink:hover {
@@ -40,6 +60,7 @@
   border-radius: 8px;
   border: none;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .navButton:hover {
@@ -49,7 +70,7 @@
 /* Hero Section */
 .hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: 100px 20px;
   background: linear-gradient(to right, #4a3aff, #ff6600);
   color: white;
 }
@@ -74,6 +95,7 @@
   border-radius: 8px;
   border: none;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .heroButton:hover {
@@ -82,13 +104,13 @@
 
 /* Features */
 .features {
-  padding: 60px 20px;
+  padding: 80px 20px;
   background: #f9f9f9;
 }
 
 .sectionTitle {
   text-align: center;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: bold;
   margin-bottom: 40px;
 }
@@ -96,24 +118,30 @@
 .featureGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 24px;
 }
 
 .featureCard {
   background: white;
-  padding: 20px;
+  padding: 24px;
   border-radius: 12px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
 }
 
 .featureTitle {
   font-weight: bold;
   margin-bottom: 12px;
+  font-size: 18px;
 }
 
 /* How It Works */
 .howItWorks {
-  padding: 60px 20px;
+  padding: 80px 20px;
 }
 
 .steps {
@@ -136,40 +164,45 @@
 
 /* Testimonials */
 .testimonials {
-  padding: 60px 20px;
+  padding: 80px 20px;
   background: #f9f9f9;
 }
 
 .testimonialGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 24px;
 }
 
 .testimonialCard {
   background: white;
-  padding: 20px;
+  padding: 24px;
   border-radius: 12px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 /* Pricing */
 .pricing {
-  padding: 60px 20px;
+  padding: 80px 20px;
 }
 
 .pricingGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 24px;
 }
 
 .pricingCard {
   background: white;
-  padding: 20px;
+  padding: 32px 24px;
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.pricingCard:hover {
+  transform: translateY(-5px);
 }
 
 .highlight {
@@ -178,7 +211,7 @@
 
 .price {
   display: block;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   margin: 12px 0;
 }
@@ -186,19 +219,29 @@
 .primaryButton {
   background: #4a3aff;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 8px;
   border: none;
   cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.primaryButton:hover {
+  background: #392ecc;
 }
 
 .secondaryButton {
   background: #ff6600;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 8px;
   border: none;
   cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.secondaryButton:hover {
+  background: #e65c00;
 }
 
 /* Footer */
@@ -206,6 +249,21 @@
   background: #4a3aff;
   color: white;
   text-align: center;
-  padding: 20px;
-  margin-top: 60px;
+  padding: 24px;
+  margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 36px;
+  }
+
+  .heroSubtitle {
+    font-size: 16px;
+  }
+
+  .navLinks {
+    display: none; /* optional: turn into hamburger menu */
+  }
 }
