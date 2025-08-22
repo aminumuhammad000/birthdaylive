@@ -5,6 +5,8 @@ import Login from "./Login";
 import Register from "./Register";
 import Forget from "./Forget";
 import OtpPage from "./OtpPage";
+import birthdayVideo from '../../../assets/birthday.mp4';
+import { Link } from "react-router-dom";
 
 const AuthPage: React.FC = () => {
   type AuthPageType = "login" | "register" | "forget" | "otp";
@@ -21,7 +23,9 @@ const AuthPage: React.FC = () => {
 
   return (
     <div className={styles.wrapper}>
-    <form className={styles.mainForm} onSubmit={(e) => handleFormSubmit(e)}>
+      <Link to="/" id="link"><span className={styles.close}>X</span></Link>
+      <video src={birthdayVideo} muted loop autoPlay className={styles.video}></video>
+       <form className={styles.mainForm} onSubmit={(e) => handleFormSubmit(e)}>
         {page == "login" && <Login setIsLogin={setPage} /> }
         {page == "register" && <Register setIsLogin={setPage}/>}
         {page == "forget" && <Forget setIsLogin={setPage}/>}

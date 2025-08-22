@@ -1,10 +1,45 @@
 .wrapper {
+  position: relative;
   width: 100%;
   min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, var(--primary-blue), var(--happy-yellow));
+  z-index: 1;
+}
+.close{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+.close:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+.video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100vh;
+  width: auto;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  opacity: 0.5;
+  z-index: -1;
 }
 
 .form {
@@ -40,7 +75,7 @@
 
 .googleBtn {
   padding: 12px;
-  border: 2px solid var(--secondary-orange);
+  border: 1px solid var(--secondary-orange);
   border-radius: 10px;
   background: var(--white);
   color: var(--secondary-orange);
@@ -127,4 +162,16 @@
 .link {
   color: var(--primary-blue);
   font-weight: 500;
+}
+@media (max-width: 600px) {
+  .wrapper{
+    position: fixed;
+  }
+  .form {
+    width: 90%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background: var(--white);
+  }
 }
