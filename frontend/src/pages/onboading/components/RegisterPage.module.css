@@ -1,0 +1,130 @@
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-blue), var(--happy-yellow));
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.input {
+  padding: 12px;
+  margin-bottom: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: var(--light-gray);
+  font-size: 0.95rem;
+}
+
+.primaryBtn {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary-blue);
+  color: var(--white);
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: background 0.3s ease;
+}
+
+.primaryBtn:hover {
+  background: var(--primary-hover-blue);
+}
+
+.googleBtn {
+  padding: 12px;
+  border: 2px solid var(--secondary-orange);
+  border-radius: 10px;
+  background: var(--white);
+  color: var(--secondary-orange);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.googleBtn:hover {
+  background: var(--secondary-hover-orange);
+}
+
+.text {
+  text-align: center;
+  margin-top: 1rem;
+  color: gray;
+}
+
+.link {
+  color: var(--primary-blue);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-blue), var(--happy-yellow));
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  padding: 12px;
+  margin-bottom: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: var(--light-gray);
+  font-size: 0.95rem;
+}
+
+.primaryBtn {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary-blue);
+  color: var(--white);
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: background 0.3s ease;
+}
+
+.primaryBtn:hover {
+  background: var(--primary-hover-blue);
+}
+
+.secondaryBtn {
+  padding: 12px;
+  border: 2px solid var(--secondary-orange);
+  border-radius: 10px;
+  background: var(--white);
+  color: var(--secondary-orange);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.secondaryBtn:hover {
+  background: var(--secondary-hover-orange);
+}
+
+.text {
+  text-align: center;
+  margin-top: 1rem;
+  color: gray;
+}
+
+.link {
+  color: var(--primary-blue);
+  font-weight: 500;
+}

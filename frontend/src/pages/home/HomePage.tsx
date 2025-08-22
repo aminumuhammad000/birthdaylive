@@ -1,32 +1,44 @@
 import React from "react";
 import styles from "./home.module.css";
-import "./globals.css"
-
+import birthday from "../../assets/birthday.mp4"
+import logo from "../../assets/logo.png"; // Assuming you have a logo image
+import { Link } from "react-router-dom";
 const HomePage: React.FC = () => {
   return (
     <div className={styles.page}>
       {/* Navbar */}
       <nav className={styles.navbar}>
-        <div className={styles.logo}>BirthdayLive</div>
+        <div className={styles.logo}>
+          <img src={logo} alt="logo" className={styles.logoimg}/>
+          <p className={styles.title}>BirthdayLive</p>
+          </div>
         <div className={styles.navLinks}>
           <a href="#features" className={styles.navLink}>Features</a>
           <a href="#how-it-works" className={styles.navLink}>How it Works</a>
           <a href="#testimonials" className={styles.navLink}>Testimonials</a>
           <a href="#pricing" className={styles.navLink}>Pricing</a>
         </div>
-        <button className={styles.navButton}>Get Started</button>
+        <button className={styles.navButton}><Link to="/auth" id="link">Get Started</Link></button>
       </nav>
 
       {/* Hero Section */}
-      <header className={styles.hero}>
-        <h1 className={styles.heroTitle}>
+      <div className={styles.hero}>
+         {/* <video src={birthday}  /> */}
+         <video src={birthday} autoPlay muted loop className={styles.video}></video>
+
+<div className={styles.content}>
+          <h1 className={styles.heroTitle}>
           Celebrate Birthdays Live, Anywhere 🎉
         </h1>
         <p className={styles.heroSubtitle}>
           Connect with family and friends, host live virtual parties, and make birthdays unforgettable.
         </p>
-        <button className={styles.heroButton}>Start Your Free Party</button>
-      </header>
+        <button className={styles.heroButton}><Link to="/dashboard" id="link">Start Your Free Party</Link></button>
+
+</div>
+
+      
+      </div>
 
       {/* Features */}
       <section id="features" className={styles.features}>

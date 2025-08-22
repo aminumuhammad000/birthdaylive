@@ -1,15 +1,16 @@
-import './App.css'
-import HomePage from './home/HomePage'
+import { Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/dashboard/Dashboard";
+import HomePage from "./pages/home/HomePage";
+import { Onboading } from "./pages/onboading/Onboading";
 
 function App() {
-
   return (
-    <div className="App">
-      <>
-      <HomePage />
-      </>
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/auth" element={<Onboading />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
