@@ -1,10 +1,10 @@
-import React, { ReactNode, FC } from "react";
+import React, { type ReactNode } from "react";
 import styles from "./AuthCard.module.css";
 
 interface AuthCardProps {
   title: string;
   subtitle?: string;
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 const AuthCard: React.FC<AuthCardProps> = ({ title, subtitle, children }) => {
