@@ -1,0 +1,162 @@
+.dashboard {
+position: relative;
+  font-family: 'Nunito', sans-serif;
+  background: #f9f9ff;
+  min-height: 100vh;
+  padding: 15px;
+  color: #333;
+}
+.sidebar{
+    position: fixed;
+    z-index: 1000;
+}
+.main{
+    display: block;
+    align-content: center;
+    width: calc(100% - 100px);
+    margin-inline: auto;
+    margin-left: 100px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #392ecc;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background: #ddd;
+  border-radius: 50%;
+}
+
+.heroCard {
+  background: linear-gradient(135deg, #392ecc, #f0cc04);
+  color: white;
+  text-align: center;
+  padding: 32px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.countdown {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.joinBtn {
+  background: #fff;
+  color: #392ecc;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.joinBtn:hover {
+  background: #f8e263;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.messages {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.liveBox {
+  background: #eee;
+  height: 150px;
+  border-radius: 12px;
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reactions span {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.album {
+  display: flex;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.albumPic {
+  width: 60px;
+  height: 60px;
+  background: #ddd;
+  border-radius: 8px;
+}
+
+.downloadBtn {
+  background: #f0cc04;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.gifts span {
+  font-size: 28px;
+  margin-right: 10px;
+}
+
+.reactionRow span {
+  display: inline-block;
+  margin-right: 16px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}

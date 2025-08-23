@@ -11,8 +11,9 @@ const Register: React.FC<RegisterProps> = ({ setIsLogin }) =>{
         <>
          <AuthCard title="Create your account" subtitle="Join the fun, live!">
             <div className={styles.form}>
-          <input type="email" placeholder="Email" className={styles.input} />
-          <input type="password" placeholder="Password" className={styles.input} />
+          <input type="text" placeholder="Full Name" name="name" className={styles.input} />
+          <input type="email" placeholder="Email" name="email" className={styles.input} />
+          <input type="password" placeholder="Password" name="password" className={styles.input} />
 
           <button type="submit" className={styles.primaryBtn}>Register</button>
           <button type="button" className={styles.googleBtn}>Continue with Google</button>
